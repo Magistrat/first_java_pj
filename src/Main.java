@@ -14,17 +14,15 @@ public class Main {
         action = scan.nextLine();
 
         float res;
-        if (action.equals("+")) {
-            res = num1 + num2;
-        } else if (action.equals("-")) {
-            res = num1 - num2;
-        } else if (action.equals("*")) {
-            res = num1 * num2;
-        } else if (action.equals("/")) {
-            res = num1 / num2;
-        } else {
-            System.out.println("Неверное действие" + action);
-            res = 0;
+        switch (action) {
+            case "+" -> res = num1 + num2;
+            case "-" -> res = num1 - num2;
+            case "*" -> res = num1 * num2;
+            case "/" -> res = num1 / num2;
+            default -> {
+                System.out.println("Неверное действие" + action);
+                res = 0;
+            }
         }
         System.out.println(res);
 
